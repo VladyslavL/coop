@@ -1,0 +1,15 @@
+$fb: 30px;
+$fp: 16px;
+$cl: #3943da;
+$tx: #fff;
+$ff: 'Open Sans', sans-serif;
+
+@import 'parts/00_mixins';
+@import 'parts/01_reset';
+@import 'parts/02_classes';
+@import 'parts/03_ui_kit';
+@import 'parts/04_apps';
+@import 'parts/05_header';
+@import 'parts/06_footer';
+
+@import 'templates/00_front_page';
