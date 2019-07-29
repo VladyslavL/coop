@@ -28,8 +28,10 @@ body {
   background: #000;
   font-size: $fp * 0.9375;
   color: $tx;
-  @include rwd-max(1024) { &.is_overflow {overflow: hidden} }
-  @include rwd-min(768) {font-size: $fp}
+  @include rwd-min(768) {
+    font-size: $fp;
+    max-height: 100vh;
+  }
 }
 #main {
   @include flex(1, 0, auto);

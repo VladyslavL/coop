@@ -2,6 +2,8 @@
 /*jshint multistr: true, latedef: nofunc */
 /*global jQuery, $, Swiper*/
 
+var player = videojs(document.querySelector('.video-js'));
+
 $(document).ready(function() {
     'use strict';
 
