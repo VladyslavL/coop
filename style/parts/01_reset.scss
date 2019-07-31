@@ -11,7 +11,7 @@
 html, body {margin: 0; height: 100%}
 
 html {
-  font: 400 #{$fb * 0.7}/1.42 $ff;
+  font: 400 #{$fb * 0.7}/1.4 $ff;
   box-sizing: border-box;
   -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -26,23 +26,20 @@ body {
   @include flex-direction(column);
   min-height: 100vh;
   background: #000;
-  font-size: $fp * 0.9375;
+  font-size: $fp;
+  letter-spacing: 0.011538em;
   color: $tx;
-  @include rwd-min(768) {
-    font-size: $fp;
-    max-height: 100vh;
-  }
 }
 #main {
   @include flex(1, 0, auto);
   overflow: hidden;
 }
 .container {
-  width: 1140px;
-  max-width: calc(100% - 36px);
+  width: 1230px;
+  max-width: calc(100% - 48px);
   margin: 0 auto;
   position: relative;
-  @include rwd-range(1024, 481) {max-width: calc(100% - 48px)}
+  &.is_smaller {width: 1138px}
   @include rwd-min(1025) {max-width: 94%}
 }
 

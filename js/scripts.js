@@ -2,10 +2,16 @@
 /*jshint multistr: true, latedef: nofunc */
 /*global jQuery, $, Swiper*/
 
-var player = videojs(document.querySelector('.video-js'));
-
 $(document).ready(function() {
     'use strict';
+
+    var player = videojs(document.querySelector('.video-js'));
+
+    $('.video__play').on('click', function () {
+        player.play();
+        $(this).addClass('is_hidden');
+        $('.video_scene__inner').addClass('is_hidden');
+    });
 
 });
 

@@ -2,36 +2,66 @@
 
 .button {
   @extend %ani;
-  display: inline-block;
-  vertical-align: middle;
-  font: 400 16px/1.2 $ff;
+  @include flexbox;
+  @include align-items(center);
+  font: 700 12px/1.25 $ff;
+  letter-spacing: 0.011667em;
   color: #fff;
-  background: $cl;
-  padding: rem(7) rem(27);
-  box-shadow: inset 0 0 0 2px $cl;
-  text-align: center;
+  padding: 0 14px;
+  min-height: 48px;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px rgba(#fff, 0.3);
   cursor: pointer;
-  @include hover {
-    color: $cl;
-    background: #fff;
+  @include rwd-min(768) {
+    @include inline-flex;
+    vertical-align: middle;
+    min-width: 155px;
+    &.is_dw {
+      figure {margin-right: 10px}
+    }
+    & + .button {margin-left: 10px}
+  }
+  @include rwd-max(767) {
+    width: 340px;
+    max-width: 100%;
+    margin-bottom: 16px;
+    @include justify-content(center);
+  }
+  @include hover {box-shadow: inset 0 0 0 2px rgba(#fff, 0)}
+  &.is_fb {
+    @include hover {background: #415893}
+  }
+  &.is_ln {
+    @include hover {background: #0075a8}
+  }
+  &.is_dw {
+    @include hover {background: #4e5456}
   }
   &[disabled],
   &.is_disabled {pointer-events: none}
-  & + .button {margin-left: 7px}
+  figure {margin-right: 20px}
 }
 .link {
   box-shadow: 0 2px $cl;
   @include hover {box-shadow: 0 0 $cl}
 }
 
+h1 {
+  font: 100 34px/1.05 $ff2;
+  letter-spacing: -0.03113em;
+  @include rwd-min(768) {font-size: rem(62)}
+  strong {font-weight: 700}
+}
+
 p {
+  line-height: 1.69;
   padding-bottom: rem(21);
   &.jEmpty {padding-bottom: 0}
 }
 small, sub {
   display: inline-block;
   vertical-align: baseline;
-  font-size: 87.5%;
+  font-size: 10px;
 }
 strong, b {font-weight: 700}
 

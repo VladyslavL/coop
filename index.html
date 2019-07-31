@@ -27,8 +27,8 @@
         </div>
     </header>
 
-    <section class="video_scene">
-        <video class="video-js" controls preload="auto" data-setup="{}">
+    <div class="video_scene">
+        <video class="video-js" controls preload="auto" poster="images/lorem-im25.jpg" data-setup="{}">
             <source src="video/lorem_vid01.mp4" type="video/mp4">
             <source src="video/lorem_vid01.webm" type="video/webm">
             <p class="vjs-no-js">
@@ -36,14 +36,64 @@
                 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
         </video>
-        <div class="container">
+        <div class="video__play mob_show">
+            <img src="images/play.svg" alt="play">
+            <span>Play Now</span>
         </div>
-    </section>
+    </div>
+
+    <div class="video_scene__inner">
+        <div class="video__info container is_smaller">
+            <div class="video__views">
+                <strong>12,450</strong>
+            </div>
+            <div class="video__title">
+                <h1>Aleks <br>
+                    <strong>er viktig for Coop</strong>
+                </h1>
+            </div>
+            <div class="video__desc">
+                <p>I forbindelse med lansering av Coopay spås det at din rolle er viktig. Se filmen som vi har laget spesielt til deg, og føl frihet til å dele budskapet på sosiale medier.</p>
+            </div>
+        </div>
+        <div class="video__play mob_hide">
+            <img src="images/play.svg" alt="play">
+            <span>Play Now</span>
+        </div>
+    </div>
 
 </div>
 
 <footer>
-    <div class="container">
+    <div class="container is_smaller flex__mob">
+        <div class="footer__buttons">
+            <a href="#" class="button is_fb" target="_blank" rel="noopener">
+                <figure>
+                    <img src="images/fcbk.svg" alt="Facebook">
+                </figure>
+                <span>Facebook</span>
+            </a>
+            <a href="#" class="button is_ln" target="_blank" rel="noopener">
+                <figure>
+                    <img src="images/lnkdn.svg" alt="LinkedIn">
+                </figure>
+                <span>LinkedIn</span>
+            </a>
+            <a href="video/lorem_vid01.mp4" class="button is_dw" download>
+                <figure>
+                    <img src="images/download.svg" alt="download">
+                </figure>
+                <span>Last ned filmen</span>
+            </a>
+        </div>
+        <div class="footer__info">
+            <div class="copyright">
+                <small>© 2019 Coop. all rights reserved</small>
+            </div>
+            <div class="powered_by">
+                <small>Povered by <strong>Storm 121</strong></small>
+            </div>
+        </div>
     </div>
 </footer>
 

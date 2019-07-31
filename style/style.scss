@@ -1,8 +1,9 @@
 $fb: 30px;
-$fp: 16px;
+$fp: 13px;
 $cl: #3943da;
 $tx: #fff;
-$ff: 'Open Sans', sans-serif;
+$ff: 'Helvetica Neue', sans-serif;
+$ff2: 'Cera Pro', sans-serif;
 
 @import 'parts/00_mixins';
 @import 'parts/01_reset';
@@ -11,6 +12,5 @@ $ff: 'Open Sans', sans-serif;
 @import 'parts/04_apps';
 @import 'parts/05_header';
 @import 'parts/06_footer';
-@import 'parts/07_video';
 
 @import 'templates/00_front_page';
