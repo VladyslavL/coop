@@ -15,6 +15,16 @@ $(document).ready(function() {
 
     player.landscapeFullscreen();
 
+    player.on('touchstart', function (e) {
+        if (e.target.nodeName === 'VIDEO') {
+            if (player.paused()) {
+                this.play();
+            } else {
+                this.pause();
+            }
+        }
+    });
+
 });
 
 

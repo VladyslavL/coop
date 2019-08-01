@@ -6,6 +6,13 @@
   height: 100%;
   font-size: 14px;
   cursor: pointer;
+  &.vjs-has-started {
+    & + .video__play {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
   .vjs-control-bar {
     background-color: transparent;
     @include rwd-min(768) {
