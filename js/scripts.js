@@ -13,6 +13,8 @@ $(document).ready(function() {
         $('.video_scene__inner').addClass('is_hidden');
     });
 
+    player.landscapeFullscreen();
+
 });
 
 

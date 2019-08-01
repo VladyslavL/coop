@@ -4,17 +4,39 @@
 .video-js {
   width: 100%;
   height: 100%;
+  font-size: 14px;
   cursor: pointer;
-  .vjs-big-play-button {display: none}
   .vjs-control-bar {
+    background-color: transparent;
     @include rwd-min(768) {
-      width: 1138px;
-      bottom: 120px;
+      width: 1178px;
+      bottom: 126px;
       margin: 0 auto;
     }
-    @include rwd-range(1024, 768) {max-width: calc(100% - 48px)}
-    @include rwd-min(1025) {max-width: 94%}
+    @include rwd-range(1024, 768) {max-width: 100%}
+    @include rwd-min(1025) {max-width: 98%}
   }
+  .vjs-slider {
+    background: rgba(#fff, 0.3);
+  }
+  .vjs-progress-holder {
+    height: 2px;
+    top: 1px;
+  }
+  .vjs-play-progress:before {content: none}
+  .vjs-volume-bar.vjs-slider-horizontal {
+    height: 2px;
+    top: 2px;
+    .vjs-volume-level {
+      height: 2px;
+      &:before {content: none}
+    }
+  }
+  .vjs-volume-panel {@include order(1)}
+  .vjs-fullscreen-control {@include order(2)}
+  .vjs-remaining-time,
+  .vjs-big-play-button,
+  .vjs-picture-in-picture-control {display: none}
 }
 
 
