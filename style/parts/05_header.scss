@@ -3,7 +3,7 @@
 header {
   background: $cl;
   padding: 24px 0 18px;
-  @include rwd-min(768) {
+  @include rwd-min(1025) {
     height: 95px;
     padding: 25px 0 20px;
   }
@@ -11,9 +11,9 @@ header {
 
 .logo {
   margin-left: -17px;
-  @include rwd-min(768) {margin-left: -21px}
+  @include rwd-min(1025) {margin-left: -21px}
   img {
     width: 119px;
-    @include rwd-min(768) {width: 144px}
+    @include rwd-min(1025) {width: 144px}
   }
 }

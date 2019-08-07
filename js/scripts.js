@@ -2,8 +2,16 @@
 /*jshint multistr: true, latedef: nofunc */
 /*global jQuery, $, Swiper*/
 
+
+
 $(document).ready(function() {
     'use strict';
+
+    var md = new MobileDetect(window.navigator.userAgent);
+
+    if ( md.mobile() !== null && md.phone() !== null && md.os() !== null ) {
+        $('body').addClass('is_mobile');
+    }
 
     var player = videojs(document.querySelector('.video-js'));
 
