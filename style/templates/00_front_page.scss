@@ -13,6 +13,15 @@
       pointer-events: none;
     }
   }
+  &.vjs-fullscreen {
+    @media screen and (min-width: 1025px) and (max-width: 1280px) and (orientation: landscape) {
+      .vjs-control-bar {
+        width: 100%;
+        max-width: 100%;
+        bottom: 0;
+      }
+    }
+  }
   .vjs-control-bar {
     background-color: transparent;
     @include rwd-min(1025) {
