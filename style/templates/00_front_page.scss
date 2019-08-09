@@ -24,9 +24,10 @@
   }
   .vjs-control-bar {
     background-color: transparent;
+    z-index: 1;
     @include rwd-min(1025) {
       width: 1178px;
-      bottom: 126px;
+      bottom: rem(126);
       margin: 0 auto;
       max-width: 98%;
     }
@@ -57,7 +58,21 @@
 
 .video_scene {
   height: 354px;
-  @include rwd-max(1024) {position: relative}
+  @include rwd-max(1024) {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 25px;
+      @include gradient(0deg, #000, rgba(#000, 0.55), rgba(#000, 0));
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+  @include rwd-range(1024, 768) {height: 434px}
   @include rwd-min(1025) {height: calc(100vh - 95px)}
   video {object-fit: cover}
 }
@@ -75,13 +90,13 @@
     width: rem(105);
     height: rem(105);
   }
-  @include rwd-max(1024) {
+  //@include rwd-max(1024) {
     &.is_hidden {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
-  }
+  //}
   @include hover {
     img {@include transform(translate(-50%, -70%) scale(0.7))}
     span {
@@ -115,7 +130,7 @@
     top: 95px;
     left: 0;
     right: 0;
-    bottom: 120px;
+    bottom: rem(120);
     @include flexbox;
     @include align-items(flex-end);
     z-index: 1;
@@ -130,7 +145,7 @@
       top: 100%;
       left: 0;
       right: 0;
-      height: 120px;
+      height: rem(120);
     }
   }
 }
@@ -141,6 +156,15 @@
     @include flexbox;
     @include flex-direction(column);
     padding-bottom: rem(27);
+  }
+  @include rwd-range(1024, 768) {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    .video__views {width: 100%}
+    .video__title,
+    .video__desc {width: 50%}
+    .video__title {padding-right: 15px}
+    .video__desc {padding: 15px 0}
   }
 }
 
@@ -158,5 +182,6 @@
 .video__views {
   font-size: 12px;
   @include rwd-min(1025) {@include order(1)}
-  @include rwd-max(1024) {padding: 8px 0 50px}
+  @include rwd-range(1024, 768) {padding: 36px 0 56px}
+  @include rwd-max(767) {padding: 8px 0 50px}
 }

@@ -7,7 +7,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 120px;
+    height: rem(120);
     width: 1230px;
     max-width: 94%;
     margin: 0 auto;
@@ -20,8 +20,39 @@ footer {
 
 .footer__buttons {
   @include rwd-min(1025) {@include order(1)}
-  @include rwd-max(1024) {padding-bottom: 23px}
-  .button {pointer-events: all}
+  @include rwd-max(480) {padding-bottom: 23px}
+  @include rwd-range(1024, 481) {
+    @include flexbox;
+    @include justify-content(space-between);
+    padding-bottom: 37px;
+  }
+  .button {
+    pointer-events: all;
+    @include rwd-min(768) {
+      &.is_dw {
+        figure {margin-right: 10px}
+      }
+    }
+    @include rwd-max(1024) {@include justify-content(center)}
+    @include rwd-range(1024, 481) {
+      @include flex(1);
+      min-width: unset;
+    }
+    @include rwd-range(1024, 768) {
+      & + .button {margin-left: 20px}
+    }
+    @include rwd-range(767, 481) {
+      & + .button {margin-left: 16px}
+      figure {margin-right: 0}
+      span {display: none}
+    }
+    @include rwd-max(480) {
+      width: 340px;
+      max-width: 100%;
+      margin-bottom: 16px;
+      & + .button {margin-left: 0}
+    }
+  }
 }
 
 .footer__info {
@@ -31,6 +62,7 @@ footer {
     @include flexbox;
     @include align-items(center);
   }
+  @include rwd-range(767, 481) {@include justify-content(space-between)}
   @include rwd-max(1024) {padding-bottom: 26px}
 }
 

@@ -18,7 +18,9 @@ $(document).ready(function() {
     $('.video__play').on('click', function () {
         player.play();
         $(this).addClass('is_hidden');
-        $('.video_scene__inner').addClass('is_hidden');
+        // setTimeout(function () {
+            $('.video_scene__inner').addClass('is_hidden');
+        // }, 3000);
     });
 
     player.landscapeFullscreen();

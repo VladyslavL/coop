@@ -40,6 +40,7 @@ body {
   margin: 0 auto;
   position: relative;
   &.is_smaller {width: 1138px}
+  @include rwd-range(1024, 768) {max-width: calc(100% - 78px)}
   @include rwd-min(1025) {max-width: 94%}
 }
 
