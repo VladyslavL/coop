@@ -1394,6 +1394,14 @@ footer {
   .video-js .vjs-picture-in-picture-control {
     display: none; }
 
+.vjs-text-track-cue div {
+  font-family: "Cera Pro", sans-serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background-color: #003f69 !important;
+  padding: 0 5px 3px; }
+
 @media screen and (max-width: 1024px) {
   .video_scene {
     position: relative; }

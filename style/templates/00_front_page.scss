@@ -61,6 +61,15 @@
   .vjs-picture-in-picture-control {display: none}
 }
 
+.vjs-text-track-cue div {
+  font-family: $video-track-font-family !important;
+  font-size: $video-track-font-size !important;
+  font-weight: $video-track-font-weight !important;
+  color: $video-track-color !important;
+  background-color: $video-track-background !important;
+  padding: 0 5px 3px;
+}
+
 
 .video_scene {
   //height: 354px;
