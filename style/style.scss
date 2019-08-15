@@ -11,12 +11,6 @@ $video-track-color: #fff;
 $video-track-background: #003f69;
 $video-track-font-family: 'Cera Pro', sans-serif;
 $video-track-font-weight: 700;
-// specify font-size based on rem for responsiveness
-// for desktop 1rem = 30px
-// for smaller desktop 1rem = 27px
-// for tablet 1rem = 24px
-// for mobile 1rem = 21px
-$video-track-font-size: 1.3rem;
 
 
 @import 'parts/00_mixins';
