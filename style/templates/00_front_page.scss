@@ -3,7 +3,7 @@
 .vjs-poster {background-size: cover}
 .video-js {
   width: 100%;
-  height: 100%;
+  height: auto;
   font-size: 14px;
   cursor: pointer;
   &.vjs-has-started {
@@ -22,12 +22,18 @@
       }
     }
   }
+  .vjs-tech {
+    position: relative;
+    height: auto;
+    max-height: 100%;
+    @include rwd-min(1025) {max-height: calc(100vh - 95px)}
+  }
   .vjs-control-bar {
     background-color: transparent;
     z-index: 1;
     @include rwd-min(1025) {
       width: 1178px;
-      bottom: rem(126);
+      //bottom: rem(126);
       margin: 0 auto;
       max-width: 98%;
     }
@@ -57,11 +63,11 @@
 
 
 .video_scene {
-  height: 354px;
+  //height: 354px;
   @include rwd-max(1024) {
     position: relative;
     &:after {
-      content: '';
+      //content: '';
       position: absolute;
       left: 0;
       right: 0;
@@ -72,9 +78,9 @@
       z-index: 0;
     }
   }
-  @include rwd-range(1024, 768) {height: 434px}
+  //@include rwd-range(1024, 768) {height: 434px}
   @include rwd-min(1025) {height: calc(100vh - 95px)}
-  video {object-fit: cover}
+  video {object-fit: contain}
 }
 
 .video__play {
@@ -130,7 +136,7 @@
     top: 95px;
     left: 0;
     right: 0;
-    bottom: rem(120);
+    bottom: 0;
     @include flexbox;
     @include align-items(flex-end);
     z-index: 1;
@@ -140,7 +146,7 @@
       pointer-events: none;
     }
     &:after {
-      content: '';
+      //content: '';
       position: absolute;
       top: 100%;
       left: 0;

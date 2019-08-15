@@ -1233,15 +1233,11 @@ footer {
   pointer-events: none; }
   @media screen and (min-width: 1025px) {
     footer {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 4rem;
       width: 1230px;
       max-width: 94%;
       margin: 0 auto;
-      padding-top: 26px;
+      padding: 26px 0;
+      margin-top: 26px;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
       z-index: 2; }
       footer .container {
@@ -1342,7 +1338,7 @@ footer {
 
 .video-js {
   width: 100%;
-  height: 100%;
+  height: auto;
   font-size: 14px;
   cursor: pointer; }
   .video-js.vjs-has-started + .video__play {
@@ -1354,13 +1350,19 @@ footer {
       width: 100%;
       max-width: 100%;
       bottom: 0; } }
+  .video-js .vjs-tech {
+    position: relative;
+    height: auto;
+    max-height: 100%; }
+    @media screen and (min-width: 1025px) {
+      .video-js .vjs-tech {
+        max-height: calc(100vh - 95px); } }
   .video-js .vjs-control-bar {
     background-color: transparent;
     z-index: 1; }
     @media screen and (min-width: 1025px) {
       .video-js .vjs-control-bar {
         width: 1178px;
-        bottom: 4.2rem;
         margin: 0 auto;
         max-width: 98%; } }
   .video-js .vjs-slider {
@@ -1392,30 +1394,24 @@ footer {
   .video-js .vjs-picture-in-picture-control {
     display: none; }
 
-.video_scene {
-  height: 354px; }
-  @media screen and (max-width: 1024px) {
-    .video_scene {
-      position: relative; }
-      .video_scene:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 25px;
-        background-image: -webkit-linear-gradient(450deg, #000, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
-        background-image: linear-gradient(0deg, #000, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
-        pointer-events: none;
-        z-index: 0; } }
-  @media screen and (max-width: 1024px) and (min-width: 768px) {
-    .video_scene {
-      height: 434px; } }
-  @media screen and (min-width: 1025px) {
-    .video_scene {
-      height: calc(100vh - 95px); } }
-  .video_scene video {
-    object-fit: cover; }
+@media screen and (max-width: 1024px) {
+  .video_scene {
+    position: relative; }
+    .video_scene:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 25px;
+      background-image: -webkit-linear-gradient(450deg, #000, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+      background-image: linear-gradient(0deg, #000, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+      pointer-events: none;
+      z-index: 0; } }
+@media screen and (min-width: 1025px) {
+  .video_scene {
+    height: calc(100vh - 95px); } }
+.video_scene video {
+  object-fit: contain; }
 
 .video__play {
   position: absolute;
@@ -1479,7 +1475,7 @@ footer {
     top: 95px;
     left: 0;
     right: 0;
-    bottom: 4rem;
+    bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1493,7 +1489,6 @@ footer {
       visibility: hidden;
       pointer-events: none; }
     .video_scene__inner:after {
-      content: '';
       position: absolute;
       top: 100%;
       left: 0;
