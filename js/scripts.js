@@ -18,12 +18,18 @@ $(document).ready(function() {
     $('.video__play').on('click', function () {
         player.play();
         $(this).addClass('is_hidden');
-        // setTimeout(function () {
-            $('.video_scene__inner').addClass('is_hidden');
-        // }, 3000);
+        $('.video_scene__inner').addClass('is_hidden');
+        // $('.video_desktop_layer').addClass('is_shown');
+        $('.video_desktop_layer').slideDown(400);
     });
 
-    player.landscapeFullscreen();
+    player.landscapeFullscreen({
+        fullscreen: {
+            enterOnRotate: true,
+            alwaysInLandscapeMode: true,
+            iOS: true
+        }
+    });
 
     player.on('touchstart', function (e) {
         if (e.target.nodeName === 'VIDEO') {

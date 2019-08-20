@@ -2,11 +2,9 @@
 
 header {
   background: $cl;
-  padding: 22px 0 20px;
-  @include rwd-min(1025) {
-    height: 95px;
-    padding: 25px 0 20px;
-  }
+  height: 70px;
+  padding-top: 15px;
+  @include rwd-min(1025) {padding-top: 9px}
 }
 
 .logo {
