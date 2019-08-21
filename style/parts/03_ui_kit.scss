@@ -14,15 +14,15 @@
   background: transparent;
   box-shadow: inset 0 0 0 2px rgba(#fff, 0.3);
   cursor: pointer;
-  @include hover {box-shadow: inset 0 0 0 2px rgba(#fff, 0)}
+  @include hover {
+    background: #4e5456;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
+  }
   &.is_fb {
     @include hover {background: #415893}
   }
   &.is_ln {
     @include hover {background: #0075a8}
-  }
-  &.is_dw {
-    @include hover {background: #4e5456}
   }
   &[disabled],
   &.is_disabled {pointer-events: none}
@@ -30,8 +30,10 @@
   figure {margin-right: 20px}
 }
 .link {
-  box-shadow: 0 2px $cl;
-  @include hover {box-shadow: 0 0 $cl}
+  color: inherit;
+  font-weight: 700;
+  box-shadow: 0 0;
+  @include hover {box-shadow: 0 1px}
 }
 
 h1 {

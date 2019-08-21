@@ -73,4 +73,7 @@ footer {
   @include rwd-max(374) {padding-bottom: 3px}
 }
 
-.powered_by {pointer-events: all}
+.powered_by {
+  pointer-events: all;
+  a {@extend .link}
+}

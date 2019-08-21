@@ -21,6 +21,7 @@ $(document).ready(function() {
         $('.video_scene__inner').addClass('is_hidden');
         // $('.video_desktop_layer').addClass('is_shown');
         $('.video_desktop_layer').slideDown(400);
+        $('.button.scroll_down').addClass('is_shown');
     });
 
     player.landscapeFullscreen({
@@ -39,6 +40,13 @@ $(document).ready(function() {
                 this.pause();
             }
         }
+    });
+
+
+    $('.scroll_down').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $(document).height()
+        }, 'slow');
     });
 
 });

@@ -807,9 +807,11 @@ div.wpcf7 {
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
   cursor: pointer; }
   .button:active {
+    background: #4e5456;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0); }
   @media screen and (min-width: 1025px) {
     .button:hover {
+      background: #4e5456;
       box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0); } }
   .button.is_fb:active {
     background: #415893; }
@@ -821,11 +823,6 @@ div.wpcf7 {
   @media screen and (min-width: 1025px) {
     .button.is_ln:hover {
       background: #0075a8; } }
-  .button.is_dw:active {
-    background: #4e5456; }
-  @media screen and (min-width: 1025px) {
-    .button.is_dw:hover {
-      background: #4e5456; } }
   .button[disabled], .button.is_disabled {
     pointer-events: none; }
   .button + .button {
@@ -833,13 +830,15 @@ div.wpcf7 {
   .button figure {
     margin-right: 20px; }
 
-.link, .content p a, .content li a {
-  box-shadow: 0 2px #003f69; }
-  .link:active, .content p a:active, .content li a:active {
-    box-shadow: 0 0 #003f69; }
+.link, .content p a, .content li a, .powered_by a {
+  color: inherit;
+  font-weight: 700;
+  box-shadow: 0 0; }
+  .link:active, .content p a:active, .content li a:active, .powered_by a:active {
+    box-shadow: 0 1px; }
   @media screen and (min-width: 1025px) {
-    .link:hover, .content p a:hover, .content li a:hover {
-      box-shadow: 0 0 #003f69; } }
+    .link:hover, .content p a:hover, .content li a:hover, .powered_by a:hover {
+      box-shadow: 0 1px; } }
 
 h1 {
   font: 100 34px/1.05 "Cera Pro", sans-serif;
@@ -1217,6 +1216,25 @@ header {
   @media screen and (min-width: 1025px) {
     header {
       padding-top: 9px; } }
+  header .button.scroll_down {
+    display: none;
+    min-width: 80px;
+    min-height: 42px;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    @media screen and (max-width: 1024px) and (min-width: 481px) and (orientation: landscape) {
+      header .button.scroll_down {
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex; } }
+    @media screen and (min-width: 1025px) and (max-height: 850px) {
+      header .button.scroll_down.is_shown {
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex; } }
 
 .logo {
   margin-left: -17px; }
@@ -1359,7 +1377,7 @@ footer {
   .video-js .vjs-tech {
     position: relative;
     height: auto;
-    width: auto;
+    width: 1280px;
     max-width: 100%;
     max-height: calc(100vh - 72px); }
   .video-js .vjs-control-bar {
@@ -1599,7 +1617,7 @@ footer {
       order: 1; } }
   @media screen and (max-width: 1024px) and (min-width: 768px) {
     .video__views {
-      padding: 36px 0 56px; } }
+      padding: 20px 0 35px; } }
   @media screen and (max-width: 767px) {
     .video__views {
       padding: 15px 0 25px; } }
