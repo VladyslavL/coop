@@ -19,10 +19,18 @@
     box-shadow: inset 0 0 0 2px rgba(#fff, 0);
   }
   &.is_fb {
+    background: #415893;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
     @include hover {background: #415893}
   }
   &.is_ln {
+    background: #0075a8;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
     @include hover {background: #0075a8}
+  }
+  &.is_dw {
+    background: #4e5456;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
   }
   &[disabled],
   &.is_disabled {pointer-events: none}
