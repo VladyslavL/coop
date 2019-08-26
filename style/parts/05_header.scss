@@ -9,6 +9,7 @@ header {
     display: none;
     min-width: 80px;
     min-height: 42px;
+    line-height: 42px;
     text-align: center;
     @include justify-content(center);
     @media screen and (max-width: 1024px) and (min-width: 481px) and (orientation: landscape) {@include inline-flex}
