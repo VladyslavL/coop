@@ -11,9 +11,12 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#003f69">
     <!--<link rel="shortcut icon" href="images/fav.png" type="image/x-icon" sizes="16x16"/>-->
+    <script type="text/javascript" src="js/_jquery.js"></script>
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+	<script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
     <link rel="stylesheet" href="style/libs.css"/>
     <link rel="stylesheet" href="style/style.css"/>
-    <script type="text/javascript" src="js/_jquery.js"></script>
 </head>
 <body>
 
@@ -22,17 +25,15 @@
     <header>
         <div class="container flex">
             <a class="logo" href="#">
-                <img src="images/coopay_logo_3.svg" alt="logo">
+                <img src="images/logo2.svg" alt="logo">
             </a>
             <a href="javascript:;" class="button scroll_down">Del film</a>
         </div>
     </header>
 
     <div class="video_scene">
-        <video class="video-js" controls preload="auto" poster="images/lorem-im25.jpg" data-setup="{}">
-            <source src="video/lorem_vid01.mp4" type="video/mp4">
-            <source src="video/lorem_vid01.webm" type="video/webm">
-            <track kind="captions" src="tracks/norsk.vtt" srclang="nb" label="Norsk" default>
+        <video class="video-js" preload="none" playsinline controls poster="images/DNB-thumb-2.jpg" data-setup='{"customControlsOnMobile": true}'>
+            <source src="video/index.m3u8" type="application/x-mpegURL">
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a web browser that
                 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -47,7 +48,7 @@
                 <div class="video_desktop_layer__inner flex_start">
                     <div class="video_desktop_layer__left">
                         <div class="video__title">
-                            <h1><strong>Hei Anne</strong></h1>
+                            <h1><strong>Hei, Fornavn!</strong></h1>
                         </div>
                         <div class="video__desc">
                             <p>I forbindelse med lansering av Coopay spås det at din rolle er viktig. Se filmen som vi har laget spesielt til deg. Del gjerne budskapet på sosiale medier.</p>
@@ -71,11 +72,23 @@
                                 </figure>
                                 <span>LinkedIn</span>
                             </a>
+                            <a href="#" class="button is_email" target="_blank" rel="noopener">
+                                <figure>
+                                    <img src="images/email.svg" alt="Email">
+                                </figure>
+                                <span>LinkedIn</span>
+                            </a>
                             <a href="video/lorem_vid01.mp4" class="button is_dw" download>
                                 <figure>
                                     <img src="images/download.svg" alt="download">
                                 </figure>
                                 <span>Last ned filmen</span>
+                            </a>
+                            <a href="#" class="button is_share" target="_blank" rel="noopener">
+                                <figure>
+                                    <img src="images/share.svg" alt="Share">
+                                </figure>
+                                <span>Send ide</span>
                             </a>
                         </div>
                     </div>
@@ -93,13 +106,13 @@
     </div>
 
     <div class="video_scene__inner" style="background-image:url(images/lorem-im25.jpg);">
-        <div class="video__info container is_smaller">
+        <div class="video__info container">
             <div class="video__views">
                 <span>Sett:</span>
                 <strong>12,450</strong>
             </div>
             <div class="video__title">
-                <h1><strong>Hei Anne</strong></h1>
+                <h1><strong>Hei, Fornavn!</strong></h1>
             </div>
             <div class="video__desc">
                 <p>I forbindelse med lansering av Coopay spås det at din rolle er viktig. Se filmen som vi har laget spesielt til deg. Del gjerne budskapet på sosiale medier.</p>
@@ -119,11 +132,23 @@
                             </figure>
                             <span>LinkedIn</span>
                         </a>
+                        <a href="#" class="button is_email" target="_blank" rel="noopener">
+                            <figure>
+                                <img src="images/email.svg" alt="Email">
+                            </figure>
+                            <span>LinkedIn</span>
+                        </a>
                         <a href="video/lorem_vid01.mp4" class="button is_dw" download>
                             <figure>
                                 <img src="images/download.svg" alt="download">
                             </figure>
                             <span>Last ned filmen</span>
+                        </a>
+                        <a href="#" class="button is_share" target="_blank" rel="noopener">
+                            <figure>
+                                <img src="images/share.svg" alt="Share">
+                            </figure>
+                            <span>Send ide</span>
                         </a>
                     </div>
                     <div class="footer__info">
@@ -160,11 +185,23 @@
                 </figure>
                 <span>LinkedIn</span>
             </a>
+            <a href="#" class="button is_email" target="_blank" rel="noopener">
+                <figure>
+                    <img src="images/email.svg" alt="Email">
+                </figure>
+                <span>LinkedIn</span>
+            </a>
             <a href="video/lorem_vid01.mp4" class="button is_dw" download>
                 <figure>
                     <img src="images/download.svg" alt="download">
                 </figure>
                 <span>Last ned filmen</span>
+            </a>
+            <a href="#" class="button is_share" target="_blank" rel="noopener">
+                <figure>
+                    <img src="images/share.svg" alt="Share">
+                </figure>
+                <span>Send ide</span>
             </a>
         </div>
         <div class="footer__info">
