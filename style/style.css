@@ -18,7 +18,7 @@ body {
 }
 
 html {
-    font: 400 21px/1.4 "Helvetica Neue", sans-serif;
+    font: 400 21px/1.4 "Fedra", sans-serif;
     box-sizing: border-box;
     -ms-text-size-adjust: none;
     -webkit-text-size-adjust: none;
@@ -55,7 +55,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: #fff;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.011538em;
     color: #fff;
 }
@@ -1149,7 +1149,7 @@ div.wpcf7 .screen-reader-response {
     -webkit-align-items: center;
     align-items: center;
     vertical-align: middle;
-    font: 700 12px/1.25 "Helvetica Neue", sans-serif;
+    font: 700 14px/1.25 "Helvetica Neue", sans-serif;
     letter-spacing: 0.011667em;
     color: #fff;
     padding: 0 14px;
@@ -1225,8 +1225,15 @@ div.wpcf7 .screen-reader-response {
 }
 
 .button.is_share {
-    background: #007272;;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0)
+    min-width: 155px;
+    background: #007272;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0);
+}
+
+@media screen and (max-width: 480px){
+    .button.is_share{
+        order: -1;
+    }
 }
 
 .button.is_share:active {
@@ -1288,19 +1295,20 @@ div.wpcf7 .screen-reader-response {
 }
 
 h1 {
-    font: 100 34px/1.05 "Cera Pro", sans-serif;
-    letter-spacing: -0.03113em
+    font: bold 34px/1.05 "Fedra", sans-serif;
+    letter-spacing: -0.03113em;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
     h1 {
-        font-size: 52px
+        font-size: 58px;
     }
 }
 
 @media screen and (min-width: 1025px) {
     h1 {
-        font-size: 62px
+        font-size: 68px;
     }
 }
 
@@ -1321,7 +1329,7 @@ small,
 sub {
     display: inline-block;
     vertical-align: baseline;
-    font-size: 10px
+    font-size: 12px;
 }
 
 strong,
@@ -1915,7 +1923,9 @@ header .button.scroll_down:hover{
 
 @media screen and (max-width: 480px) {
     .footer__buttons {
-        padding-bottom: 23px
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -1940,10 +1950,13 @@ header .button.scroll_down:hover{
 
     .footer__buttons .button:not(.is_share) {
         pointer-events: all;
-        min-width: 48px;
-        height: 48px;
         padding: 0;
+        min-width: 55px;
+    }
+
+    .footer__buttons .button{
         justify-content: center;
+        height: 55px;
     }
 
     .footer__buttons .button:not(.is_share) span{
@@ -2008,7 +2021,7 @@ header .button.scroll_down:hover{
     color: rgba(255, 255, 255, 0.6)
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 445px) {
     .footer__info {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2439,12 +2452,12 @@ header .button.scroll_down:hover{
 @media screen and (min-width: 1025px) {
     .video__desc {
         padding-bottom: 1.2666666667rem;
-        max-width: 314px;
+        max-width: 400px;
     }
 }
 
 .video__views {
-    font-size: 12px
+    font-size: 14px;
 }
 
 @media screen and (min-width: 1025px) {
