@@ -162,8 +162,9 @@ $(document).ready(function() {
     'use strict';
 
     $('.video__play').on('click', function () {
+        var elem = this;
         player.play();
-        $(this).addClass('is_hidden');
+        $(elem).addClass('is_hidden');
         $('.video_scene__inner').addClass('is_hidden');
         // $('.video_desktop_layer').addClass('is_shown');
         $('.video_desktop_layer').slideDown(400);

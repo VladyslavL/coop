@@ -251,6 +251,14 @@ textarea:-ms-input-placeholder {
     background: #003f69
 }
 
+.video-js{
+    background-color: transparent;
+}
+
+.video-js video{
+    background: #000;
+}
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -633,9 +641,9 @@ textarea:-ms-input-placeholder {
 
 .bg,
 .video_scene__inner {
-    background-size: cover;
+    /* background-size: contain; */
     background-repeat: no-repeat;
-    background-position: 50% 50%
+    background-position: 50% 50%;
 }
 
 .last_no_spacing>*:last-child:not(.button),
@@ -2062,10 +2070,16 @@ header .button.scroll_down:hover{
     cursor: pointer
 }
 
-.video-js.vjs-has-started+.video__play {
+.video-js.vjs-playing+.video__play {
     opacity: 0;
     visibility: hidden;
     pointer-events: none
+}
+
+.video-js.vjs-paused+.video__play {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) and (orientation: landscape) {
@@ -2091,8 +2105,12 @@ header .button.scroll_down:hover{
 }
 
 .video-js .vjs-control-bar {
-    background-color: transparent;
+    /* background-color: transparent; */
     z-index: 1
+}
+
+.video-js video{
+    background-color: #fff;
 }
 
 .video-js .vjs-slider {
@@ -2215,8 +2233,8 @@ header .button.scroll_down:hover{
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     width: 74px;
     height: 74px;
     border-radius: 50%;
