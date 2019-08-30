@@ -2481,6 +2481,19 @@ header .button.scroll_down:hover{
     }
 }
 
+
+.vjs-text-track-cue{
+    bottom: auto !important;
+    top: 0 !important;
+}
+
+.vjs-text-track-cue div, .vjs-text-track-display div div div{
+    background-color: rgba(0,0,0,0.25) !important;
+    border-radius: 10px;
+    display: inline-block !important;
+    padding: 0.2em 0.4em;
+}
+
 /* IE11 HACKS */
 
 _:-ms-fullscreen, 
