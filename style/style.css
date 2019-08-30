@@ -2114,7 +2114,7 @@ header .button.scroll_down:hover{
     height: auto;
     width: 1280px;
     max-width: 100%;
-    max-height: calc(100vh - 72px)
+    max-height: calc(100vh - 72px);
 }
 
 .video-js .vjs-control-bar {
@@ -2239,7 +2239,7 @@ header .button.scroll_down:hover{
 }
 
 .video_scene video {
-    object-fit: contain
+    /* object-fit: contain */
 }
 
 .video__play {
@@ -2479,4 +2479,21 @@ header .button.scroll_down:hover{
     .video__views {
         padding: 15px 0 25px
     }
+}
+
+/* IE11 HACKS */
+
+_:-ms-fullscreen, 
+:root .video_scene {
+    height: 100%;
+}
+
+_:-ms-fullscreen, 
+:root .video_scene .video-js {
+    height: 100% !important;
+}
+
+_:-ms-fullscreen, 
+:root .video_scene .video-js object {
+    height: 100%;
 }
