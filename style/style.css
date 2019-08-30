@@ -2492,6 +2492,7 @@ header .button.scroll_down:hover{
     border-radius: 10px;
     display: inline-block !important;
     padding: 0.2em 0.4em;
+    font-size: 0.6em;
 }
 
 /* IE11 HACKS */
